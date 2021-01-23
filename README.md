@@ -36,4 +36,4 @@ yarn start
 Resultado 
 
 # print the Home page 
-![home](https://github.com/saozinha/apicripto/blob/master/src/img/public/home.png?raw=true) 
+![home](https://github.com/saozinha/apicripto/public/home.png?raw=true) 
