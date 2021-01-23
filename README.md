@@ -12,14 +12,20 @@ _Utilize um visualizador de markdown para uma melhor experiencia de leitura._
 
 ## Como Executar
 
-_E necessario ter instalada as dependencias do projeto
+_E necessario ter instaladas as dependencias do projeto
 
 Instale as dependências
 
 ```sh
-nodejs
-yarn
+yarn add .
 ```
+
+## Ferramentas
+
+- nodeJs
+- React
+ 
+
 
 Inicie a aplicação
 
@@ -27,9 +33,7 @@ Inicie a aplicação
 yarn start
 ```
  
+Resultado 
 
-## Ferramentas
-
-- nodeJs
-- React
- 
+# print the Home page 
+![home](https://github.com/saozinha/apicripto/blob/master/src/img/public/home.png?raw=true) 

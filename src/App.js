@@ -1,8 +1,8 @@
-import logo from './assets/img/crypto1.png';
 import './App.css';
 import React, { useState } from 'react';
 import {Api} from './api/api'
 import {Button, Avatar, ListItemAvatar, List, ListItem, ListItemText, Grid, Typography} from '@material-ui/core'
+ 
 
 export default function App() {
 
@@ -10,11 +10,9 @@ export default function App() {
 
   const getAllData = () => {  
     console.log("GetAllData");
-
       Api.get('v1/cryptocurrency/listings/latest')
       .then((response) => {
         if(!response.data) throw new Error('Erro ao executar a resquisição , status ' + response.status);
-       // newCoins = response.data;
         setCoins(response.data.data)
       })
       .catch((error) => {
@@ -27,6 +25,7 @@ export default function App() {
   return (
     <div className="App">
       <header className="App-header"> 
+
         <p>
            Api Crypto Coins
         </p>
@@ -38,8 +37,8 @@ export default function App() {
             <List>
                 {coins.map(item => (
                     <ListItem alignItems="flex-start">
-                        <ListItemAvatar>
-                          <Avatar alt={item.symbol} src={item.symbol} />
+                        <ListItemAvatar style={{marginRight : 10}}>
+                          <Avatar style={{padding : 15}}> {item.symbol} </Avatar>
                         </ListItemAvatar>
                         <ListItemText
                           primary={item.name}
@@ -50,9 +49,9 @@ export default function App() {
                                 variant="body2" 
                                 color="textPrimary"
                               >
-                              {"Price "+ item.quote.USD.price.toFixed(3)}
+                              {"Price USD "+ item.quote.USD.price.toFixed(2)}
                               </Typography>
-                              {" —  Circulating supply "+ item.circulating_supply}
+                              {" —  Circulating supply "+ item.circulating_supply.toFixed(2)}
                             </React.Fragment>
                           }
                         />
