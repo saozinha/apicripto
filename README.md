@@ -35,5 +35,5 @@ yarn start
  
 Resultado 
 
-# print the Home page 
+## Home page 
 ![home](https://github.com/saozinha/apicripto/blob/main/public/home.png?raw=true) 
